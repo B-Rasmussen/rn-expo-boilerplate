@@ -1,0 +1,13 @@
+{
+    "general": {
+        "yes": "Yes",
+        "no": "No",
+        "confirm": "Confirm",
+        "ok": "Ok",
+        "cancel": "Cancel"
+    },
+    "navBar": {
+        "settings": "Settings",
+        "home": "Home"
+    }
+}

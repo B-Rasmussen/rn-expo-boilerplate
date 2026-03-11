@@ -1,0 +1,13 @@
+{
+    "general": {
+        "yes": "Si",
+        "no": "No",
+        "confirm": "Confirmar",
+        "ok": "Ok",
+        "cancel": "Cancelar"
+    },
+    "navBar": {
+        "settings": "Ajustes",
+        "home": "Casa"
+    }
+}

@@ -1,3 +1,4 @@
+import i18n from "@/translations/i18n";
 import { Link, Tabs } from "expo-router";
 import { SymbolView } from "expo-symbols";
 import React from "react";
@@ -18,11 +19,29 @@ export default function TabLayout() {
                 // to prevent a hydration error in React Navigation v6.
                 headerShown: useClientOnlyValue(false, true),
             }}
+            initialRouteName="index"
         >
+            <Tabs.Screen
+                name="settings"
+                options={{
+                    title: i18n.t("navBar.settings"),
+                    tabBarIcon: ({ color }) => (
+                        <SymbolView
+                            name={{
+                                ios: "chevron.left.forwardslash.chevron.right",
+                                android: "code",
+                                web: "code",
+                            }}
+                            tintColor={color}
+                            size={28}
+                        />
+                    ),
+                }}
+            />
             <Tabs.Screen
                 name="index"
                 options={{
-                    title: "Tab One",
+                    title: i18n.t("navBar.home"),
                     tabBarIcon: ({ color }) => (
                         <SymbolView
                             name={{
@@ -51,23 +70,6 @@ export default function TabLayout() {
                                 )}
                             </Pressable>
                         </Link>
-                    ),
-                }}
-            />
-            <Tabs.Screen
-                name="two"
-                options={{
-                    title: "Tab Two",
-                    tabBarIcon: ({ color }) => (
-                        <SymbolView
-                            name={{
-                                ios: "chevron.left.forwardslash.chevron.right",
-                                android: "code",
-                                web: "code",
-                            }}
-                            tintColor={color}
-                            size={28}
-                        />
                     ),
                 }}
             />
